@@ -37,7 +37,8 @@ from sentry.conf.server import *  # NOQA
 
 import os
 import os.path
-
+TIME_ZONE = 'Asia/Shanghai'
+LANGUAGE_CODE = 'zh-hans'
 CONF_ROOT = os.path.dirname(__file__)
 
 postgres = env('SENTRY_POSTGRES_HOST') or (env('POSTGRES_PORT_5432_TCP_ADDR') and 'postgres')

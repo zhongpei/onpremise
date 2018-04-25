@@ -19,6 +19,8 @@ services:
       SENTRY_REDIS_HOST: redis
       SENTRY_POSTGRES_HOST: postgres
       SENTRY_EMAIL_HOST: smtp
+    env_file:
+      - ./.env
     volumes:
       - ./data/sentry:/var/lib/sentry/files
 
@@ -49,7 +51,7 @@ services:
       - memcached
       - smtp
     ports:
-      - '9000:9000'
+      - '717:9000'
 
   cron:
     restart: unless-stopped
